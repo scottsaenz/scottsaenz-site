@@ -58,7 +58,7 @@ _5 yrs 2 mos_
 
 ## Skills & Expertise
 
-- **Programming & Tools:** Python, SQL, DBT, Snowflake, Terraform, AWS (Lambda, SQS, DynamoDB, Step Functions, S3), Azure Data Factory, Databricks, PySpark, Git
+- **Programming & Tools:** Python, SQL, dbt, Snowflake, Terraform, AWS (Lambda, SQS, DynamoDB, Step Functions, S3), Azure Data Factory, Databricks, PySpark, Git
 - **Business Intelligence:** Power BI, Tableau, SQL Server, Azure Analysis Services
 - **Data Engineering:** ETL development, data pipeline design, big data processing, data modeling, performance tuning, automated testing
 - **Other:** CI/CD, cloud migrations, stakeholder collaboration, training and mentoring
