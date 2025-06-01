@@ -14,17 +14,16 @@ theme:
     - content.code.copy
   palette:
     - scheme: default
-      primary: '#509270'    # green from logo
       accent: '#f5c97b'     # gold from logo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: '#03182a'    # dark blue from logo
       accent: '#aacdcc'     # light blue from logo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  logo: src/imgs/icon.svg
 nav:
   - Home: index.md
   - About: about.md
@@ -78,4 +77,4 @@ markdown_extensions:
 #extra_javascript:
 #  - javascripts/mathjax.js
 #  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-logo: src/imgs/icon.svg
+
