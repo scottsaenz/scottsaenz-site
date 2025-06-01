@@ -5,8 +5,9 @@ site_description: Personal website for Scott Saenz
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
+    - navigation.instant
+    #- navigation.tabs
+    #- navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
@@ -41,13 +42,14 @@ extra:
       link: https://github.com/scottsaenz
 plugins:
   - search
-  - blogging
+  - blogging:
+      paging: false
   - mkdocs-jupyter
   - glightbox
   - table-reader
   - mermaid2
   - git-revision-date-localized
-  - awesome-pages
+  #- awesome-pages
   - minify
   - section-index
 
