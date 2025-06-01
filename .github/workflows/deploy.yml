@@ -21,7 +21,7 @@ jobs:
         run: pip install uv
 
       - name: Install dependencies
-        run: uv add .
+        run: uv pip install .
 
       - name: Build MkDocs site
         run: mkdocs build
