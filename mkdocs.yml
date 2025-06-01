@@ -11,6 +11,19 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 nav:
   - Home: index.md
   - About: about.md
@@ -28,4 +41,38 @@ extra:
       link: https://github.com/scottsaenz
 plugins:
   - search
-  - blog
+  - blogging
+  - mkdocs-jupyter
+  - glightbox
+  - table-reader
+  - mermaid2
+  - git-revision-date-localized
+  - awesome-pages
+  - minify
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - attr_list
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.critic:
+      mode: inline
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
