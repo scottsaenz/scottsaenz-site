@@ -27,7 +27,7 @@ jobs:
         run: uv pip install .
 
       - name: Build MkDocs site
-        run: mkdocs build
+        run: .venv/bin/mkdocs build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
