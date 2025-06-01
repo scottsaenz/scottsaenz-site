@@ -1,0 +1,28 @@
+site_name: Scott Saenz Personal Site
+site_url: https://scottsaenz.com
+site_description: Personal website for Scott Saenz
+theme:
+  name: material
+  logo: img/logo.svg
+  favicon: img/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - Welcome: blog/index.md
+  - Training Plans:
+      - Advanced Python Training: training/advanced-python-training.md
+docs_dir: docs
+extra_css:
+  - css/custom.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/scottsaenz

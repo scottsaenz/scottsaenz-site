@@ -1,6 +1,6 @@
 # Scott Saenz Personal Site
 
-This is the source code for [scottsaenz.com](https://scottsaenz.com), a personal website built using [Docusaurus](https://docusaurus.io). The site serves as a platform to share blog posts, training plans, and personal updates.
+This is the source code for [scottsaenz.com](https://scottsaenz.com), a personal website built using [MkDocs](https://www.mkdocs.org/).
 
 ## Features
 
@@ -10,7 +10,7 @@ This is the source code for [scottsaenz.com](https://scottsaenz.com), a personal
 
 ## Tech Stack
 
-- **Framework**: [Docusaurus 2](https://docusaurus.io/)
+- **Framework**: [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
 - **Hosting**: Amazon S3
 - **CI/CD**: GitHub Actions
 
@@ -18,30 +18,25 @@ This is the source code for [scottsaenz.com](https://scottsaenz.com), a personal
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 16 or higher)
-- [npm](https://www.npmjs.com/)
+- [Python 3.7+](https://www.python.org/)
+- [pip](https://pip.pypa.io/en/stable/)
 
 ### Getting Started
 
-1. Clone the repository:
+1. Install MkDocs and Material theme:
    ```bash
-   git clone https://github.com/scottsaenz/scottsaenz-site.git
-   cd scottsaenz-site
+   pip install mkdocs-material
    ```
-2. Install dependencies
-```bash
-npm install
-```
-3. Start the development server
-```bash
-npm run start
-```  
-This site will be available at `http://localhost:3000`
-4. Build the site for production
-```bash
-npm run build
-```
-The static files will be generated in the `build` directory
+2. Serve the site locally:
+   ```bash
+   mkdocs serve
+   ```
+   The site will be available at `http://localhost:8000`
+3. Build the site for production:
+   ```bash
+   mkdocs build
+   ```
+   The static files will be generated in the `site` directory.
 
 **Deployment**  
 The site is deployed to an Amazon S3 bucket using GitHub Actions. Any changes pushed to the main branch will trigger the deployment workflow.
@@ -52,4 +47,4 @@ This is a personal project and not open for contributions at this time.
 **License**
 This project is licensed under the MIT License.
 
-Built with ❤️ using Docusaurus.
+Built with ❤️ using MkDocs.
