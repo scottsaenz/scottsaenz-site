@@ -5,22 +5,19 @@ site_description: Personal website for Scott Saenz
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
+    - navigation.instant
+    #- navigation.tabs
+    #- navigation.sections
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -41,13 +38,14 @@ extra:
       link: https://github.com/scottsaenz
 plugins:
   - search
-  - blogging
+  - blogging:
+      paging: false
   - mkdocs-jupyter
   - glightbox
   - table-reader
   - mermaid2
   - git-revision-date-localized
-  - awesome-pages
+  #- awesome-pages
   - minify
   - section-index
 
@@ -73,6 +71,7 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.arithmatex:
       generic: true
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+#extra_javascript:
+#  - javascripts/mathjax.js
+#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+logo: src/imgs/icon.svg

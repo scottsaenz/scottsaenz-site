@@ -1,3 +1,8 @@
+<p align="center">
+<br>
+<img src="src/imgs/logo.svg" alt="Scott Saenz Logo" style="max-width: 90%; height: auto;" />
+</p>
+
 # Welcome to Scott Saenz's Personal Site
 
 Welcome! I'm **Scott Saenz**, a data engineer and analytics enthusiast passionate about building robust data solutions and sharing knowledge with the community.
