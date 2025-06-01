@@ -1,0 +1,31 @@
+site_name: Scott Saenz | Data Engineer & Analytics Enthusiast
+site_author: Scott Saenz
+site_url: https://www.scottsaenz.com
+site_description: Personal website for Scott Saenz
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - Blog Index: blog/index.md
+      - Migrating from Docusaurus to MkDocs: blog/20250601.md
+  - Training Plans:
+      - Advanced Python Training: training/advanced-python-training.md
+docs_dir: docs
+extra_css:
+  - css/custom.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/scottsaenz
+plugins:
+  - search
+  - blog

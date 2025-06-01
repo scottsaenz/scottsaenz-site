@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: mkdocs-build
+        name: Build MkDocs site
+        entry: mkdocs build --strict
+        language: system
+        types: [python, markdown, yaml]
+        pass_filenames: false
+        fail_fast: true

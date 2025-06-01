@@ -7,6 +7,8 @@
 # Generated files
 .docusaurus
 .cache-loader
+# MkDocs build artifacts
+/site/*
 
 # Misc
 .DS_Store

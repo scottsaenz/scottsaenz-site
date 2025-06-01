@@ -12,16 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          node-version: 23
+          python-version: '3.13'
 
       - name: Install dependencies
-        run: npm ci
+        run: pip install mkdocs-material
 
-      - name: Build Docusaurus site
-        run: npm run build
+      - name: Build MkDocs site
+        run: mkdocs build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -31,7 +31,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy to S3
-        run: aws s3 sync build/ s3://scottsaenz.com --delete
+        run: aws s3 sync site/ s3://scottsaenz.com --delete
 
       - name: Invalidate CloudFront cache
         run: |
