@@ -7,3 +7,4 @@ repos:
         language: system
         types: [python, markdown, yaml]
         pass_filenames: false
+        fail_fast: true
