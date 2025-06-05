@@ -81,6 +81,10 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
   - js/mermaid-config.js
+extra:
+  analytics:
+    provider: google
+    property: !ENV GA_PROPERTY_ID
 
 
 

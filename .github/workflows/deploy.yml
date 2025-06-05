@@ -28,6 +28,8 @@ jobs:
 
       - name: Build MkDocs site
         run: .venv/bin/mkdocs build
+        env:
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
