@@ -1,5 +1,5 @@
 ---
-title: Welcome to My Blog
+template: blog.html
 ---
 
 Welcome to my blog! This space is dedicated to sharing updates, insights, and highlights from my personal and professional journey. Here's what you can expect:

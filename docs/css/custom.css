@@ -6,3 +6,16 @@
   --md-secondary-fg-color--light: #aacdcc;
   --md-secondary-fg-color--dark:  #f5c97b;
 }
+
+.mermaid .node text,
+.mermaid .edgeLabel text,
+.mermaid .label text {
+  fill: #000 !important;
+}
+
+/* For dark theme, use white text */
+[data-md-color-scheme="slate"] .mermaid .node text,
+[data-md-color-scheme="slate"] .mermaid .edgeLabel text,
+[data-md-color-scheme="slate"] .mermaid .label text {
+  fill: #000 !important;
+}
