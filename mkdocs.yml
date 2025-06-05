@@ -27,9 +27,6 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - Blog:
-      - Blog Index: blog/index.md
-      - Migrating from Docusaurus to MkDocs: blog/20250601.md
   - Training Plans:
       - Advanced Python Training: training/advanced-python-training.md
 docs_dir: docs
@@ -41,8 +38,7 @@ extra:
       link: https://github.com/scottsaenz
 plugins:
   - search
-  - blogging:
-      paging: false
+  - blog
   - mkdocs-jupyter
   - glightbox
   - table-reader
@@ -77,4 +73,6 @@ markdown_extensions:
 #extra_javascript:
 #  - javascripts/mathjax.js
 #  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
 
