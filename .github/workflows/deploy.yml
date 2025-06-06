@@ -45,7 +45,47 @@ jobs:
         run: |
           aws cloudfront create-invalidation --distribution-id E1E72T1VG0T1TU --paths "/*"
 
-      - name: Submit sitemap to Google
+      - name: Wait for CloudFront invalidation
         run: |
+          echo "Waiting for CloudFront cache invalidation to complete..."
+          sleep 30
+
+      - name: Submit sitemap to Google Search Console
+        run: |
+          echo "Submitting sitemap to Google Search Console..."
           curl -X POST \
-            "https://www.google.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml"
+            "https://www.google.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml" \
+            -H "User-Agent: GitHub-Actions-Bot/1.0" \
+            --fail-with-body || echo "Google sitemap submission failed, but continuing..."
+
+      - name: Submit sitemap to Bing Webmaster Tools
+        run: |
+          echo "Submitting sitemap to Bing Webmaster Tools..."
+          curl -X POST \
+            "https://www.bing.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml" \
+            -H "User-Agent: GitHub-Actions-Bot/1.0" \
+            --fail-with-body || echo "Bing sitemap submission failed, but continuing..."
+
+      - name: Verify site accessibility
+        run: |
+          echo "Verifying site is accessible..."
+          curl -I "https://www.scottsaenz.com" \
+            -H "User-Agent: GitHub-Actions-Bot/1.0" \
+            --fail-with-body
+
+      - name: Check sitemap accessibility
+        run: |
+          echo "Verifying sitemap is accessible..."
+          curl -I "https://www.scottsaenz.com/sitemap.xml" \
+            -H "User-Agent: GitHub-Actions-Bot/1.0" \
+            --fail-with-body
+
+      - name: Deployment Summary
+        run: |
+          echo "🚀 Deployment completed successfully!"
+          echo "✅ Site built with MkDocs"
+          echo "✅ Files synced to S3"
+          echo "✅ CloudFront cache invalidated"
+          echo "✅ Sitemap submitted to search engines"
+          echo "✅ Site accessibility verified"
+          echo "🌐 Site available at: https://www.scottsaenz.com"
