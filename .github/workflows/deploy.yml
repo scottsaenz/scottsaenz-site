@@ -49,21 +49,14 @@ jobs:
         run: |
           echo "Waiting for CloudFront cache invalidation to complete..."
           sleep 30
-
-      - name: Submit sitemap to Google Search Console
-        run: |
-          echo "Submitting sitemap to Google Search Console..."
-          curl -X POST \
-            "https://www.google.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml" \
-            -H "User-Agent: GitHub-Actions-Bot/1.0" \
-            --fail-with-body || echo "Google sitemap submission failed, but continuing..."
-
+          
       - name: Submit sitemap to Bing Webmaster Tools
         run: |
           echo "Submitting sitemap to Bing Webmaster Tools..."
-          curl -X POST \
+          curl -X GET \
             "https://www.bing.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml" \
             -H "User-Agent: GitHub-Actions-Bot/1.0" \
+            -H "Content-Length: 0" \
             --fail-with-body || echo "Bing sitemap submission failed, but continuing..."
 
       - name: Verify site accessibility
