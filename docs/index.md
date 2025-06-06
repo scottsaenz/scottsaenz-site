@@ -1,6 +1,6 @@
 <p align="center">
 <br>
-<img src="src/imgs/logo.svg" alt="Scott Saenz Logo" style="max-width: 90%; height: auto;" />
+<img src="src/imgs/logo.svg" alt="Scott Saenz Logo" style="max-width: 75%; height: auto;" />
 </p>
 
 # Welcome to Scott Saenz's Personal Site
