@@ -44,3 +44,8 @@ jobs:
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation --distribution-id E1E72T1VG0T1TU --paths "/*"
+
+      - name: Submit sitemap to Google
+        run: |
+          curl -X POST \
+            "https://www.google.com/ping?sitemap=https://www.scottsaenz.com/sitemap.xml"
