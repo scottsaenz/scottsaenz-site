@@ -44,6 +44,7 @@ plugins:
   - blog:
       archive: false
       post_url_format: "{categories}/{slug}"
+  - macros
   #- mkdocs-jupyter
   #- glightbox
   #- table-reader
