@@ -8,7 +8,7 @@ def define_env(env):
     """
     
     @env.macro
-    def podcast_icons(spotify_url, apple_url=None, youtube_url=None, website_url=None):
+    def podcast_icons(spotify_url, apple_url=None, youtube_url=None, website_url=None, website_icon=None, website_alt=None):
         """
         Generate podcast platform icons with links
         
@@ -17,6 +17,8 @@ def define_env(env):
             apple_url: URL to Apple Podcasts episode (optional)
             youtube_url: URL to YouTube episode (optional) 
             website_url: URL to podcast website episode (optional)
+            website_icon: Path to website icon SVG (optional, defaults to python-logo-only.svg)
+            website_alt: Alt text for website icon (optional, defaults to "Podcast Website")
         """
         icons = []
         
@@ -36,16 +38,18 @@ def define_env(env):
         
         # Website (optional)
         if website_url:
-            website_html = f'''[![Real Python Website](../../src/imgs/python-logo-only.svg){{width=21px}}]({website_url})'''
+            icon_path = website_icon if website_icon else "../../src/imgs/python-logo-only.svg"
+            alt_text = website_alt if website_alt else "Podcast Website"
+            website_html = f'''[![{alt_text}]({icon_path}){{width=21px}}]({website_url})'''
             icons.append(website_html)
         
         # Join with spacing
         return '&nbsp;&nbsp;'.join(icons)
     
     @env.macro
-    def listen_on(spotify_url, apple_url=None, youtube_url=None, website_url=None):
+    def listen_on(spotify_url, apple_url=None, youtube_url=None, website_url=None, website_icon=None, website_alt=None):
         """
         Complete "Listen on:" section with podcast icons
         """
-        icons = podcast_icons(spotify_url, apple_url, youtube_url, website_url)
+        icons = podcast_icons(spotify_url, apple_url, youtube_url, website_url, website_icon, website_alt)
         return f"**Listen on:**\n{icons}"
