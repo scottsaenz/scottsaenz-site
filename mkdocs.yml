@@ -33,6 +33,9 @@ nav:
   - Training Plans:
       - Advanced Python Training: training/advanced-python-training.md
 docs_dir: docs
+validation:
+  nav:
+    omitted_files: ignore
 extra_css:
   - css/custom.css
 extra:
@@ -44,6 +47,7 @@ plugins:
   - blog:
       archive: false
       post_url_format: "{categories}/{slug}"
+  - macros
   #- mkdocs-jupyter
   #- glightbox
   #- table-reader

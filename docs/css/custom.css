@@ -19,3 +19,14 @@
 [data-md-color-scheme="slate"] .mermaid .label text {
   fill: #000 !important;
 }
+
+/* Conditional Spotify logo display */
+/* Hide dark mode logo in light theme */
+[data-md-color-scheme="default"] .spotify-dark {
+  display: none;
+}
+
+/* Hide light mode logo in dark theme */
+[data-md-color-scheme="slate"] .spotify-light {
+  display: none;
+}
